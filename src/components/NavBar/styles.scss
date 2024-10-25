@@ -1,0 +1,19 @@
+@import "../../assets/style/variables.scss";
+
+.menu {
+  width: 25%;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5fa;
+  padding: $PaddingDefault;
+
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+}

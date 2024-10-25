@@ -1,0 +1,65 @@
+@import "../assets/style/variables.scss";
+
+@font-face {
+  font-family: "CircularXX-Thin";
+  src: url("../static/Fonts/Circular/CircularXXTT-Thin.ttf");
+}
+
+@font-face {
+  font-family: "CircularXX";
+  src: url("../static/Fonts/Circular/CircularXXTT-Regular.ttf");
+}
+
+@font-face {
+  font-family: "CircularXXTT-Medium";
+  src: url("../static/Fonts/Circular/CircularXXTT-Medium.ttf");
+}
+
+@font-face {
+  font-family: "CircularXX-Bold";
+  src: url("../static/Fonts/Circular/CircularXXTT-Bold.ttf");
+}
+
+@font-face {
+  font-family: "CircularXX-Black";
+  src: url("../static/Fonts/Circular/CircularXXTT-Black.ttf");
+}
+
+body {
+  font-family: CircularXX, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  font-family: CircularXX, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+button {
+  text-transform: capitalize !important;
+}
+
+.btn-group-lg>.btn,
+.btn-lg {
+  border-radius: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  appearance: none;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+a {
+  color: $PrimaryColor;
+}
