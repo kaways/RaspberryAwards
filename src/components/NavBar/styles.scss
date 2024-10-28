@@ -2,7 +2,7 @@
 
 .menu {
   width: 25%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   background: #f5f5fa;
@@ -16,4 +16,13 @@
   h1 {
     font-weight: bold;
   }
+
+  a {
+    color: gray;
+
+    &.active {
+      color: $LinkColor;
+    }
+  }
+
 }

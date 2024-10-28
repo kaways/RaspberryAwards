@@ -1,3 +1,2 @@
-export const privateRoot = '/private';
-export const welcome = 'bem-vindo';
-export const gridMessages = '/caixa-de-entrada';
+export const dashboard = '/dashboard';
+export const listMovies = '/listMovies';

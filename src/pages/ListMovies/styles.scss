@@ -1,0 +1,31 @@
+@import "../../assets/style/variables.scss";
+
+.grid-movies {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  padding: $PaddingDefault;
+  width: 100%;
+
+  .table-area-movies {
+    font-size: 2.5rem;
+    padding: $PaddingDefault;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e9e9e9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+  
+    h6 {
+      font-size: 20px;
+      margin: $PaddingDefault 0;
+    }
+
+    .ant-table-cell{
+      text-align: center;
+    }
+  }
+}
