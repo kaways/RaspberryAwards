@@ -3,9 +3,9 @@ import { Provider } from 'react-redux';
 import { ConfigProvider } from 'antd';
 import ptBR from 'antd/lib/locale/pt_BR';
 import ReactDOM from "react-dom/client";
-const root = ReactDOM.createRoot(document.getElementById("root"));
 import App from './App';
 import Store from './store';
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <Provider store={Store}>

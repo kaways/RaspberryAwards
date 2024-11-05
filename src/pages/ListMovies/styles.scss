@@ -1,15 +1,13 @@
-@import "../../assets/style/variables.scss";
-
 .grid-movies {
   display: flex;
   flex-direction: row;
   flex-flow: wrap;
-  padding: $PaddingDefault;
+  padding: 1rem;
   width: 100%;
 
   .table-area-movies {
     font-size: 2.5rem;
-    padding: $PaddingDefault;
+    padding: 1rem;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -21,7 +19,7 @@
   
     h6 {
       font-size: 20px;
-      margin: $PaddingDefault 0;
+      margin: 1rem 0;
     }
 
     .ant-table-cell{

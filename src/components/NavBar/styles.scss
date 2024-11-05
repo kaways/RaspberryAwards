@@ -1,12 +1,10 @@
-@import "../../assets/style/variables.scss";
-
 .menu {
   width: 25%;
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   background: #f5f5fa;
-  padding: $PaddingDefault;
+  padding: 1rem;
 
   .menu-links {
     display: flex;
@@ -21,7 +19,7 @@
     color: gray;
 
     &.active {
-      color: $LinkColor;
+      color: #0000EE;
     }
   }
 
