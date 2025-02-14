@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { NavBar } from '../../components/NavBar';
 import { Container, Row } from "react-bootstrap";
 import { Table, Button, Input, Select } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
@@ -10,13 +9,14 @@ import './styles.scss';
 
 export const ListMovies = () => {
   const { Option } = Select;
-  const { list, totalElements } = useSelector(state => state.movies);
-  const [dataForm, setDataForm] = useState();
+  const list = useSelector(state => state?.movies?.list);
+  const totalElements = useSelector(state => state?.movies?.totalElements);
+  const [dataForm, setDataForm] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMovies(0));
-  }, []);
+    dispatch(getMovies());
+  }, [dispatch]);
 
   const handleChange = (value, key) => {
     setDataForm({ ...dataForm, [key]: value });
@@ -27,7 +27,7 @@ export const ListMovies = () => {
   };
 
   const onHandleChangeSelect = (value) => {
-    setDataForm({ ...dataForm, ['winner']: value });
+    setDataForm({ ...dataForm, 'winner': value });
     dispatch(fetchMovies.getMovies(0, totalElements, value, dataForm?.year));
   };
 
@@ -102,7 +102,6 @@ export const ListMovies = () => {
 
   return (
     <>
-      <NavBar />
       <Container className='grid-movies'>
         <Row className='table-area-movies'>
           <h6>List movies</h6>

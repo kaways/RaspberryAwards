@@ -5,11 +5,6 @@ module.exports = {
   },
   extends: [
     'react-app',
-    'plugin:prettier/recommended',
-    'prettier',
-    'plugin:react/recommended',
-    'prettier/react',
-    'eslint:recommended',
   ],
   globals: {
     Atomics: 'readonly',

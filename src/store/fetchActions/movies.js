@@ -10,7 +10,7 @@ import {
 } from '../ducks/movies';
 
 
-export const getMovies = (page, size = 206, winner, year) => {
+export const getMovies = (page = 0, size = 206, winner, year) => {
     return dispatch => {
         const LOADING_IDENTIFICATOR = 'loadingDefault';
         dispatch(startLoading(LOADING_IDENTIFICATOR));
@@ -23,9 +23,6 @@ export const getMovies = (page, size = 206, winner, year) => {
             })
             .then(res => {
                 dispatch(setAllMovies(res?.data));
-            })
-            .catch(err => {
-                console.log(err);
             })
             .finally(() => {
                 dispatch(endLoading(LOADING_IDENTIFICATOR));
@@ -42,9 +39,6 @@ export const getMultipleWinners = () => {
             .then(res => {
                 dispatch(setMoviesMultiples(res?.data?.years));
             })
-            .catch(err => {
-                console.log(err);
-            })
             .finally(() => {
                 dispatch(endLoading(LOADING_IDENTIFICATOR));
             });
@@ -60,9 +54,6 @@ export const getTopStudios = () => {
             .then(res => {
                 dispatch(setMoviesTopStudios(res?.data?.studios?.slice(0, 3)));
             })
-            .catch(err => {
-                console.log(err);
-            })
             .finally(() => {
                 dispatch(endLoading(LOADING_IDENTIFICATOR));
             });
@@ -77,9 +68,6 @@ export const getProducersInterval = () => {
             .get(`?projection=max-min-win-interval-for-producers`)
             .then(res => {
                 dispatch(setProducersInterval(res?.data));
-            })
-            .catch(err => {
-                console.log(err);
             })
             .finally(() => {
                 dispatch(endLoading(LOADING_IDENTIFICATOR));
@@ -99,9 +87,6 @@ export const getWinnerByYear = (year) => {
             })
             .then(res => {
                 dispatch(setWinnerByYear(res?.data));
-            })
-            .catch(err => {
-                console.log(err);
             })
             .finally(() => {
                 dispatch(endLoading(LOADING_IDENTIFICATOR));

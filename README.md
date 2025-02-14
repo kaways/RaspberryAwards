@@ -33,7 +33,6 @@ Manual de montagem de ambiente de desenvolvimento.
   - [Ambiente](#ambiente)
 - [Execução](#execução)
 
-
 **Atenção**
 
 > Todos os passos desta documentação são obrigatórios, sendo imprescindível que você obtenha sucesso na realização de cada passo.
@@ -95,7 +94,7 @@ O projeto RaspberryAwards.
 
     ```js
     window.env = {
-      API_URL: 'https://challenge.outsera.tech/api/movies',
+      API_URL: "",
     };
     ```
 
